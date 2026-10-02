@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Name | Developer Portfolio</title>
+  <meta name="description" content="Personal portfolio and showcase of projects." />
+  
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card-bg: #1e293b;
+      --card-border: #334155;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --accent: #38bdf8;
+      --accent-hover: #0ea5e9;
+      --radius: 12px;
+      --transition: all 0.25s ease;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg);
+      color: var(--text-main);
+      line-height: 1.6;
+      padding: 0 1.25rem;
+    }
+
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 4rem 0;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 3px solid var(--accent);
+      object-fit: cover;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 0 25px rgba(56, 189, 248, 0.25);
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.5rem;
+    }
+
+    .role {
+      color: var(--accent);
+      font-size: 1.15rem;
+      font-weight: 500;
+      margin-bottom: 1rem;
+    }
+
+    .bio {
+      color: var(--text-muted);
+      max-width: 600px;
+      margin: 0 auto 1.5rem;
+      font-size: 1rem;
+    }
+
+    /* Social Links */
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .social-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.6rem 1.2rem;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      color: var(--text-main);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: var(--transition);
+    }
+
+    .social-btn:hover {
+      background: var(--card-border);
+      border-color: var(--accent);
+      color: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    /* Section Styles */
+    section {
+      margin-bottom: 3.5rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      border-left: 4px solid var(--accent);
+      padding-left: 0.75rem;
+    }
+
+    /* Tech Stack Badges */
+    .badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .badge {
+      background-color: var(--card-bg);
+      border: 1px solid var(--card-border);
+      color: var(--text-muted);
+      padding: 0.4rem 0.85rem;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+
+    /* Projects Grid */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .project-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: var(--transition);
+    }
+
+    .project-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-4px);
+    }
+
+    .project-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .project-desc {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 1.25rem;
+      flex-grow: 1;
+    }
+
+    .project-links {
+      display: flex;
+      gap: 1rem;
+      font-size: 0.9rem;
+    }
+
+    .project-links a {
+      color: var(--accent);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-weight: 500;
+    }
+
+    .project-links a:hover {
+      text-decoration: underline;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding-top: 2rem;
+      border-top: 1px solid var(--card-border);
+      color: var(--text-muted);
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+
+  <main class="container">
+    <!-- Hero / Profile -->
+    <header class="hero">
+      <!-- Replace with your GitHub profile avatar URL or a local image -->
+      <img src="https://github.com/identicons/profile.png" alt="Profile Avatar" class="avatar" />
+      <h1>Your Name</h1>
+      <p class="role">Software Engineer & Open Source Enthusiast</p>
+      <p class="bio">
+        Welcome to my corner of the web! I build modern, scalable web applications and explore new technologies.
+      </p>
+
+      <div class="social-links">
+        <a href="https://github.com/YOUR_USERNAME" target="_blank" class="social-btn">
+          <i class="fa-brands fa-github"></i> GitHub
+        </a>
+        <a href="https://linkedin.com/in/YOUR_USERNAME" target="_blank" class="social-btn">
+          <i class="fa-brands fa-linkedin"></i> LinkedIn
+        </a>
+        <a href="mailto:your.email@example.com" class="social-btn">
+          <i class="fa-solid fa-envelope"></i> Email
+        </a>
+      </div>
+    </header>
+
+    <!-- Skills -->
+    <section>
+      <h2>Skills & Technologies</h2>
+      <div class="badges">
+        <span class="badge">JavaScript / TypeScript</span>
+        <span class="badge">React / Next.js</span>
+        <span class="badge">Node.js</span>
+        <span class="badge">Python</span>
+        <span class="badge">Docker</span>
+        <span class="badge">Git & GitHub Actions</span>
+        <span class="badge">PostgreSQL</span>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section>
+      <h2>Featured Projects</h2>
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <article class="project-card">
+          <div>
+            <h3 class="project-title">Awesome Project One</h3>
+            <p class="project-desc">
+              A brief description of what this project does, the problem it solves, and the technologies used.
+            </p>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/YOUR_USERNAME/project-one" target="_blank">
+              <i class="fa-brands fa-github"></i> Code
+            </a>
+            <a href="https://yourproject.demo.com" target="_blank">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="project-card">
+          <div>
+            <h3 class="project-title">Awesome Project Two</h3>
+            <p class="project-desc">
+              A web tool or open-source library built to simplify developer workflows and save time.
+            </p>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/YOUR_USERNAME/project-two" target="_blank">
+              <i class="fa-brands fa-github"></i> Code
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; <span id="year"></span> Your Name. Built and hosted with GitHub Pages.</p>
+    </footer>
+  </main>
+
+  <script>
+    // Automatically set current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
