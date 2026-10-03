@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tian Deng | Finance Portfolio</title>
+  <title>Tian X Deng | Finance Portfolio</title>
   
   <!-- Font Awesome for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
@@ -116,7 +116,7 @@
       transform: translateY(-2px);
     }
 
-    /* Projects Section */
+    /* General Section Styles */
     section {
       margin-bottom: 3.5rem;
     }
@@ -129,6 +129,59 @@
       padding-left: 0.75rem;
     }
 
+    /* Skills Showcase Styles */
+    .skills-container {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+    }
+
+    @media (min-width: 640px) {
+      .skills-container {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .skill-category {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+    }
+
+    .skill-category h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .skill-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .skill-list li {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 0.4rem;
+      position: relative;
+      padding-left: 1rem;
+    }
+
+    .skill-list li::before {
+      content: "•";
+      color: var(--excel-accent);
+      position: absolute;
+      left: 0;
+      font-weight: bold;
+    }
+
+    /* Projects Grid Styles */
     .projects-grid {
       display: grid;
       grid-template-columns: 1fr;
@@ -214,14 +267,14 @@
     <!-- Header / Hero Section -->
     <header class="hero">
       <div class="avatar-wrapper">
-        <img src="headshot.jpg" alt="Tian Deng" class="avatar" />
+        <img src="headshot.jpg" alt="Tian X Deng" class="avatar" />
       </div>
 
-      <h1>Tian Deng</h1>
-      <p class="subtitle">Finance Senior @ Rutgers Business School</p>
+      <h1>Tian X Deng</h1>
+      <p class="subtitle">Senior @ Rutgers Business School | Finance</p>
 
       <p class="description">
-        Senior student at Rutgers Business School pursuing a Finance degree. Passionate about corporate finance, quantitative modeling, and building comprehensive financial & operational models in Excel.
+        Senior student at Rutgers Business School pursuing a Finance degree, passionate about the industry and proficient in financial modeling and analysis in Excel.
       </p>
 
       <!-- Contact Links -->
@@ -235,9 +288,50 @@
       </div>
     </header>
 
+    <!-- Skills Showcase Section -->
+    <section>
+      <h2>Skills & Core Competencies</h2>
+      <div class="skills-container">
+
+        <!-- Category 1: Advanced Excel -->
+        <div class="skill-category">
+          <h3><i class="fa-solid fa-table-cells"></i> Excel Mastery</h3>
+          <ul class="skill-list">
+            <li>Pivot Tables & Pivot Charts</li>
+            <li>VLOOKUP, XLOOKUP & INDEX/MATCH</li>
+            <li>Dynamic Data Organization</li>
+            <li>Data Validation & Conditional Formatting</li>
+          </ul>
+        </div>
+
+        <!-- Category 2: Financial Modeling & Analysis -->
+        <div class="skill-category">
+          <h3><i class="fa-solid fa-chart-line"></i> Financial Modeling</h3>
+          <ul class="skill-list">
+            <li>Financial Models & Analysis</li>
+            <li>Discounted Cash Flow (DCF)</li>
+            <li>Time Value of Money (TVM)</li>
+            <li>Sensitivity & Scenario Analysis</li>
+          </ul>
+        </div>
+
+        <!-- Category 3: Applications & Analytics -->
+        <div class="skill-category">
+          <h3><i class="fa-solid fa-laptop-code"></i> Software & Tools</h3>
+          <ul class="skill-list">
+            <li>Microsoft Office Applications (Word, PPT, Outlook)</li>
+            <li>Linear Regression & Forecasting</li>
+            <li>Financial Statement Analysis</li>
+            <li>Executive Reporting & Dashboards</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
     <!-- Projects Section -->
     <section>
-      <h2>Excel Financial Models</h2>
+      <h2>Excel Projects</h2>
       <div class="projects-grid">
         
         <!-- Project 1 -->
@@ -248,12 +342,12 @@
             </div>
             <h3 class="project-title">BMW DCF Analysis</h3>
             <p class="project-desc">
-              Utilized BMW's historical sales and financial data to construct a discounted cash flow (DCF) model and forecast unit sales across vehicle series.
+              Constructed a comprehensive discounted cash flow (DCF) model utilizing BMW sales and operational data to calculate intrinsic value and project cash flows across vehicle series.
             </p>
           </div>
           <div class="project-actions">
             <a href="%286%29%20BMW%20TVM%20DCF%20Financial%20Model%20%28TIAN%20DENG%29.xlsx" download="(6) BMW TVM DCF Financial Model (TIAN DENG).xlsx">
-              Download Workbook <i class="fa-solid fa-download"></i>
+              Download Model <i class="fa-solid fa-download"></i>
             </a>
           </div>
         </article>
@@ -266,12 +360,12 @@
             </div>
             <h3 class="project-title">BMW Forecast Model</h3>
             <p class="project-desc">
-              Applied linear regression and trend analysis to historical automotive data to project vehicle sales and evaluate market trajectory.
+              Applied linear regression methodologies to historical automotive sales datasets to build a dynamic forecasting model predicting forward unit sales and demand patterns.
             </p>
           </div>
           <div class="project-actions">
             <a href="%282%29%20eBMW%20FORECASTING%20MODEL%20%28%20TIAN%20DENG%29.xlsx" download="(2) eBMW FORECASTING MODEL ( TIAN DENG).xlsx">
-              Download Workbook <i class="fa-solid fa-download"></i>
+              Download Model <i class="fa-solid fa-download"></i>
             </a>
           </div>
         </article>
@@ -281,7 +375,7 @@
 
     <!-- Footer -->
     <footer>
-      <p>&copy; <span id="year"></span> Tian Deng. Hosted on GitHub Pages.</p>
+      <p>&copy; <span id="year"></span> Tian X Deng. Hosted on GitHub Pages.</p>
     </footer>
   </div>
 
