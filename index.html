@@ -116,7 +116,7 @@
       transform: translateY(-2px);
     }
 
-    /* General Section Styles */
+    /* Section Styles */
     section {
       margin-bottom: 3.5rem;
     }
@@ -129,56 +129,53 @@
       padding-left: 0.75rem;
     }
 
-    /* Skills Showcase Styles */
-    .skills-container {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1.25rem;
-    }
-
-    @media (min-width: 640px) {
-      .skills-container {
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
-
-    .skill-category {
+    /* Skills Card & Bullet List */
+    .skills-card {
       background: var(--card-bg);
       border: 1px solid var(--card-border);
       border-radius: var(--radius);
-      padding: 1.25rem;
+      padding: 1.75rem 2rem;
     }
 
-    .skill-category h3 {
-      font-size: 1rem;
-      font-weight: 600;
-      color: var(--accent);
-      margin-bottom: 0.75rem;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .skill-list {
+    .skills-bullet-list {
       list-style: none;
       padding: 0;
       margin: 0;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.1rem;
     }
 
-    .skill-list li {
-      font-size: 0.9rem;
-      color: var(--text-muted);
-      margin-bottom: 0.4rem;
-      position: relative;
-      padding-left: 1rem;
+    @media (min-width: 640px) {
+      .skills-bullet-list {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.25rem 2rem;
+      }
     }
 
-    .skill-list li::before {
-      content: "•";
+    .skills-bullet-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.85rem;
+      color: var(--text-main);
+      font-size: 0.98rem;
+      line-height: 1.5;
+    }
+
+    .skills-bullet-list li i {
       color: var(--excel-accent);
-      position: absolute;
-      left: 0;
-      font-weight: bold;
+      font-size: 1.1rem;
+      margin-top: 0.2rem;
+      flex-shrink: 0;
+    }
+
+    .skills-bullet-list li span strong {
+      color: var(--text-main);
+      font-weight: 600;
+    }
+
+    .skills-bullet-list li span {
+      color: var(--text-muted);
     }
 
     /* Projects Grid Styles */
@@ -288,44 +285,40 @@
       </div>
     </header>
 
-    <!-- Skills Showcase Section -->
+    <!-- Skills Showcase Section (Bulleted List Format) -->
     <section>
       <h2>Skills & Core Competencies</h2>
-      <div class="skills-container">
-
-        <!-- Category 1: Advanced Excel -->
-        <div class="skill-category">
-          <h3><i class="fa-solid fa-table-cells"></i> Excel Mastery</h3>
-          <ul class="skill-list">
-            <li>Pivot Tables & Pivot Charts</li>
-            <li>VLOOKUP, XLOOKUP & INDEX/MATCH</li>
-            <li>Dynamic Data Organization</li>
-            <li>Data Validation & Conditional Formatting</li>
-          </ul>
-        </div>
-
-        <!-- Category 2: Financial Modeling & Analysis -->
-        <div class="skill-category">
-          <h3><i class="fa-solid fa-chart-line"></i> Financial Modeling</h3>
-          <ul class="skill-list">
-            <li>Financial Models & Analysis</li>
-            <li>Discounted Cash Flow (DCF)</li>
-            <li>Time Value of Money (TVM)</li>
-            <li>Sensitivity & Scenario Analysis</li>
-          </ul>
-        </div>
-
-        <!-- Category 3: Applications & Analytics -->
-        <div class="skill-category">
-          <h3><i class="fa-solid fa-laptop-code"></i> Software & Tools</h3>
-          <ul class="skill-list">
-            <li>Microsoft Office Applications (Word, PPT, Outlook)</li>
-            <li>Linear Regression & Forecasting</li>
-            <li>Financial Statement Analysis</li>
-            <li>Executive Reporting & Dashboards</li>
-          </ul>
-        </div>
-
+      <div class="skills-card">
+        <ul class="skills-bullet-list">
+          <li>
+            <i class="fa-solid fa-circle-check"></i>
+            <div>
+              <strong>Excel Pivot Tables:</strong>
+              <span>Summarizing high-volume transactional data, building dynamic dashboards, and structuring multidimensional reports.</span>
+            </div>
+          </li>
+          <li>
+            <i class="fa-solid fa-circle-check"></i>
+            <div>
+              <strong>VLOOKUPs & Advanced Lookups:</strong>
+              <span>Expertise with VLOOKUP, XLOOKUP, and INDEX/MATCH for reliable cross-table queries and dataset integration.</span>
+            </div>
+          </li>
+          <li>
+            <i class="fa-solid fa-circle-check"></i>
+            <div>
+              <strong>Financial Models & Analysis:</strong>
+              <span>Constructing Discounted Cash Flow (DCF), TVM models, sensitivity analysis, and pro-forma projections.</span>
+            </div>
+          </li>
+          <li>
+            <i class="fa-solid fa-circle-check"></i>
+            <div>
+              <strong>Microsoft Applications:</strong>
+              <span>Proficiency across Microsoft Office suite (Excel, PowerPoint, Word, Outlook) for executive presentations and reporting.</span>
+            </div>
+          </li>
+        </ul>
       </div>
     </section>
 
