@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your Name | Developer Portfolio</title>
-  <meta name="description" content="Personal portfolio and showcase of projects." />
+  <title>Your Name | Portfolio</title>
   
   <!-- Font Awesome for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
@@ -21,7 +20,7 @@
       --text-main: #f8fafc;
       --text-muted: #94a3b8;
       --accent: #38bdf8;
-      --accent-hover: #0ea5e9;
+      --excel-accent: #22c55e;
       --radius: 12px;
       --transition: all 0.25s ease;
     }
@@ -41,112 +40,98 @@
     }
 
     .container {
-      max-width: 860px;
+      max-width: 800px;
       margin: 0 auto;
-      padding: 4rem 0;
+      padding: 4.5rem 0 3rem;
     }
 
     /* Hero Section */
     .hero {
       text-align: center;
-      margin-bottom: 4rem;
+      margin-bottom: 3.5rem;
+    }
+
+    .avatar-wrapper {
+      margin-bottom: 1.5rem;
     }
 
     .avatar {
-      width: 120px;
-      height: 120px;
+      width: 140px;
+      height: 140px;
       border-radius: 50%;
       border: 3px solid var(--accent);
       object-fit: cover;
-      margin-bottom: 1.5rem;
-      box-shadow: 0 0 25px rgba(56, 189, 248, 0.25);
+      box-shadow: 0 0 20px rgba(56, 189, 248, 0.25);
     }
 
     h1 {
-      font-size: 2.5rem;
+      font-size: 2.25rem;
       font-weight: 700;
       letter-spacing: -0.02em;
-      margin-bottom: 0.5rem;
-    }
-
-    .role {
-      color: var(--accent);
-      font-size: 1.15rem;
-      font-weight: 500;
       margin-bottom: 1rem;
     }
 
-    .bio {
+    .description {
       color: var(--text-muted);
-      max-width: 600px;
-      margin: 0 auto 1.5rem;
-      font-size: 1rem;
+      max-width: 640px;
+      margin: 0 auto 1.75rem;
+      font-size: 1.05rem;
+      line-height: 1.7;
     }
 
-    /* Social Links */
-    .social-links {
+    /* Social / Contact Links */
+    .contact-links {
       display: flex;
       justify-content: center;
       gap: 1rem;
+      flex-wrap: wrap;
     }
 
-    .social-btn {
+    .btn {
       display: inline-flex;
       align-items: center;
-      gap: 0.5rem;
-      padding: 0.6rem 1.2rem;
+      gap: 0.6rem;
+      padding: 0.65rem 1.3rem;
       background: var(--card-bg);
       border: 1px solid var(--card-border);
       border-radius: 8px;
       color: var(--text-main);
       text-decoration: none;
-      font-size: 0.9rem;
+      font-size: 0.95rem;
       font-weight: 500;
       transition: var(--transition);
     }
 
-    .social-btn:hover {
+    .btn:hover {
       background: var(--card-border);
       border-color: var(--accent);
       color: var(--accent);
       transform: translateY(-2px);
     }
 
-    /* Section Styles */
+    /* Projects Section */
     section {
       margin-bottom: 3.5rem;
     }
 
     h2 {
-      font-size: 1.5rem;
+      font-size: 1.4rem;
       font-weight: 600;
       margin-bottom: 1.5rem;
       border-left: 4px solid var(--accent);
       padding-left: 0.75rem;
     }
 
-    /* Tech Stack Badges */
-    .badges {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-    }
-
-    .badge {
-      background-color: var(--card-bg);
-      border: 1px solid var(--card-border);
-      color: var(--text-muted);
-      padding: 0.4rem 0.85rem;
-      border-radius: 999px;
-      font-size: 0.85rem;
-      font-weight: 500;
-    }
-
-    /* Projects Grid */
     .projects-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.25rem;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    @media (min-width: 640px) {
+      .projects-grid {
+        grid-template-columns: 1fr 1fr;
+      }
     }
 
     .project-card {
@@ -162,38 +147,45 @@
 
     .project-card:hover {
       border-color: var(--accent);
-      transform: translateY(-4px);
+      transform: translateY(-3px);
+    }
+
+    .project-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--excel-accent);
+      margin-bottom: 0.75rem;
     }
 
     .project-title {
       font-size: 1.2rem;
       font-weight: 600;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.6rem;
+      color: var(--text-main);
     }
 
     .project-desc {
       color: var(--text-muted);
       font-size: 0.95rem;
+      line-height: 1.6;
       margin-bottom: 1.25rem;
       flex-grow: 1;
     }
 
-    .project-links {
-      display: flex;
-      gap: 1rem;
-      font-size: 0.9rem;
-    }
-
-    .project-links a {
-      color: var(--accent);
-      text-decoration: none;
+    .project-actions a {
       display: inline-flex;
       align-items: center;
-      gap: 0.35rem;
+      gap: 0.4rem;
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 0.9rem;
       font-weight: 500;
     }
 
-    .project-links a:hover {
+    .project-actions a:hover {
       text-decoration: underline;
     }
 
@@ -203,68 +195,57 @@
       padding-top: 2rem;
       border-top: 1px solid var(--card-border);
       color: var(--text-muted);
-      font-size: 0.875rem;
+      font-size: 0.85rem;
     }
   </style>
 </head>
 <body>
 
-  <main class="container">
-    <!-- Hero / Profile -->
+  <div class="container">
+    <!-- Header / Hero Section -->
     <header class="hero">
-      <!-- Replace with your GitHub profile avatar URL or a local image -->
-      <img src="https://github.com/identicons/profile.png" alt="Profile Avatar" class="avatar" />
+      <div class="avatar-wrapper">
+        <img src="headshot.jpg" alt="Profile Picture" class="avatar" />
+      </div>
+
       <h1>Your Name</h1>
-      <p class="role">Software Engineer & Open Source Enthusiast</p>
-      <p class="bio">
-        Welcome to my corner of the web! I build modern, scalable web applications and explore new technologies.
+
+      <!-- Personal Description Placeholder -->
+      <p class="description">
+        [Paste your personal description here. Tell visitors about your focus, experience, and what you build.]
       </p>
 
-      <div class="social-links">
-        <a href="https://github.com/YOUR_USERNAME" target="_blank" class="social-btn">
-          <i class="fa-brands fa-github"></i> GitHub
-        </a>
-        <a href="https://linkedin.com/in/YOUR_USERNAME" target="_blank" class="social-btn">
+      <!-- Contact Links -->
+      <div class="contact-links">
+        <a href="https://www.linkedin.com/in/YOUR_LINKEDIN_USERNAME" target="_blank" class="btn">
           <i class="fa-brands fa-linkedin"></i> LinkedIn
         </a>
-        <a href="mailto:your.email@example.com" class="social-btn">
-          <i class="fa-solid fa-envelope"></i> Email
+        <a href="mailto:your.email@example.com" class="btn">
+          <i class="fa-solid fa-envelope"></i> Email Me
         </a>
       </div>
     </header>
 
-    <!-- Skills -->
+    <!-- Projects Section -->
     <section>
-      <h2>Skills & Technologies</h2>
-      <div class="badges">
-        <span class="badge">JavaScript / TypeScript</span>
-        <span class="badge">React / Next.js</span>
-        <span class="badge">Node.js</span>
-        <span class="badge">Python</span>
-        <span class="badge">Docker</span>
-        <span class="badge">Git & GitHub Actions</span>
-        <span class="badge">PostgreSQL</span>
-      </div>
-    </section>
-
-    <!-- Projects -->
-    <section>
-      <h2>Featured Projects</h2>
+      <h2>Excel Projects</h2>
       <div class="projects-grid">
+        
         <!-- Project 1 -->
         <article class="project-card">
           <div>
-            <h3 class="project-title">Awesome Project One</h3>
+            <div class="project-badge">
+              <i class="fa-solid fa-file-excel"></i> Excel Analysis
+            </div>
+            <h3 class="project-title">Excel Project 1 Title</h3>
             <p class="project-desc">
-              A brief description of what this project does, the problem it solves, and the technologies used.
+              [Describe the business problem, formulas, modeling techniques, or dashboard metrics used in this spreadsheet.]
             </p>
           </div>
-          <div class="project-links">
-            <a href="https://github.com/YOUR_USERNAME/project-one" target="_blank">
-              <i class="fa-brands fa-github"></i> Code
-            </a>
-            <a href="https://yourproject.demo.com" target="_blank">
-              <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+          <div class="project-actions">
+            <!-- Link to a GitHub file, live Google Sheets/OneDrive viewer, or repo download -->
+            <a href="#" target="_blank">
+              View Model / Details <i class="fa-solid fa-arrow-up-right-from-square"></i>
             </a>
           </div>
         </article>
@@ -272,28 +253,31 @@
         <!-- Project 2 -->
         <article class="project-card">
           <div>
-            <h3 class="project-title">Awesome Project Two</h3>
+            <div class="project-badge">
+              <i class="fa-solid fa-file-excel"></i> Financial / Operations Model
+            </div>
+            <h3 class="project-title">Excel Project 2 Title</h3>
             <p class="project-desc">
-              A web tool or open-source library built to simplify developer workflows and save time.
+              [Describe the methodology, scenarios, PivotTables, or optimization tools applied in this workbook.]
             </p>
           </div>
-          <div class="project-links">
-            <a href="https://github.com/YOUR_USERNAME/project-two" target="_blank">
-              <i class="fa-brands fa-github"></i> Code
+          <div class="project-actions">
+            <a href="#" target="_blank">
+              View Model / Details <i class="fa-solid fa-arrow-up-right-from-square"></i>
             </a>
           </div>
         </article>
+
       </div>
     </section>
 
     <!-- Footer -->
     <footer>
-      <p>&copy; <span id="year"></span> Your Name. Built and hosted with GitHub Pages.</p>
+      <p>&copy; <span id="year"></span> Your Name</p>
     </footer>
-  </main>
+  </div>
 
   <script>
-    // Automatically set current year
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
