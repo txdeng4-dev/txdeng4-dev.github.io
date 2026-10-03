@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your Name | Portfolio</title>
+  <title>Tian Deng | Finance Portfolio</title>
   
   <!-- Font Awesome for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
@@ -68,6 +68,13 @@
       font-size: 2.25rem;
       font-weight: 700;
       letter-spacing: -0.02em;
+      margin-bottom: 0.5rem;
+    }
+
+    .subtitle {
+      color: var(--accent);
+      font-size: 1.1rem;
+      font-weight: 500;
       margin-bottom: 1rem;
     }
 
@@ -178,14 +185,16 @@
     .project-actions a {
       display: inline-flex;
       align-items: center;
-      gap: 0.4rem;
+      gap: 0.45rem;
       color: var(--accent);
       text-decoration: none;
       font-size: 0.9rem;
       font-weight: 500;
+      transition: var(--transition);
     }
 
     .project-actions a:hover {
+      color: var(--text-main);
       text-decoration: underline;
     }
 
@@ -205,14 +214,14 @@
     <!-- Header / Hero Section -->
     <header class="hero">
       <div class="avatar-wrapper">
-        <img src="headshot.jpg" alt="Profile Picture" class="avatar" />
+        <img src="headshot.jpg" alt="Tian Deng" class="avatar" />
       </div>
 
-      <h1>Your Name</h1>
+      <h1>Tian Deng</h1>
+      <p class="subtitle">Finance Senior @ Rutgers Business School</p>
 
-      <!-- Personal Description Placeholder -->
       <p class="description">
-        [Senior student at Rutgers Business School pursuing a Finance degree, passionate about the industry and excellent at Excel]
+        Senior student at Rutgers Business School pursuing a Finance degree. Passionate about corporate finance, quantitative modeling, and building comprehensive financial & operational models in Excel.
       </p>
 
       <!-- Contact Links -->
@@ -228,24 +237,23 @@
 
     <!-- Projects Section -->
     <section>
-      <h2>Excel Projects</h2>
+      <h2>Excel Financial Models</h2>
       <div class="projects-grid">
         
         <!-- Project 1 -->
         <article class="project-card">
           <div>
             <div class="project-badge">
-              <i class="fa-solid fa-file-excel"></i> Excel Analysis
+              <i class="fa-solid fa-file-excel"></i> Valuation & DCF
             </div>
             <h3 class="project-title">BMW DCF Analysis</h3>
             <p class="project-desc">
-              [Using BMW's sales data to compute a Dicounted cash flow, forecasting sales for various different models.]
+              Utilized BMW's historical sales and financial data to construct a discounted cash flow (DCF) model and forecast unit sales across vehicle series.
             </p>
           </div>
           <div class="project-actions">
-            <!-- Link to a GitHub file, live Google Sheets/OneDrive viewer, or repo download -->
-            <a href="(6) BMW TVM DCF Financial Model (TIAN DENG).xlsx" target="(6) BMW TVM DCF Financial Model (TIAN DENG).xlsx">
-              View Model / Details <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            <a href="%286%29%20BMW%20TVM%20DCF%20Financial%20Model%20%28TIAN%20DENG%29.xlsx" download="(6) BMW TVM DCF Financial Model (TIAN DENG).xlsx">
+              Download Workbook <i class="fa-solid fa-download"></i>
             </a>
           </div>
         </article>
@@ -254,16 +262,16 @@
         <article class="project-card">
           <div>
             <div class="project-badge">
-              <i class="fa-solid fa-file-excel"></i> Financial / Operations Model
+              <i class="fa-solid fa-file-excel"></i> Statistical Forecasting
             </div>
             <h3 class="project-title">BMW Forecast Model</h3>
             <p class="project-desc">
-              [Using BMW's data and linear regression method to project a forecasting model of sales]
+              Applied linear regression and trend analysis to historical automotive data to project vehicle sales and evaluate market trajectory.
             </p>
           </div>
           <div class="project-actions">
-            <a href="(2) eBMW FORECASTING MODEL ( TIAN DENG).xlsx" target="(2) eBMW FORECASTING MODEL ( TIAN DENG).xlsx">
-              View Model / Details <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            <a href="%282%29%20eBMW%20FORECASTING%20MODEL%20%28%20TIAN%20DENG%29.xlsx" download="(2) eBMW FORECASTING MODEL ( TIAN DENG).xlsx">
+              Download Workbook <i class="fa-solid fa-download"></i>
             </a>
           </div>
         </article>
@@ -273,7 +281,7 @@
 
     <!-- Footer -->
     <footer>
-      <p>&copy; <span id="year"></span> Your Name</p>
+      <p>&copy; <span id="year"></span> Tian Deng. Hosted on GitHub Pages.</p>
     </footer>
   </div>
 
